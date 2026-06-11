@@ -1,0 +1,424 @@
+{
+  "rows": [
+    {
+      "seed": 11,
+      "method": "PostFilter-IVF",
+      "queries": 80,
+      "recall_at_k": 0.6855902777777778,
+      "secure_topk_exact": 0.225,
+      "latency_ms": 1.1743819875164263,
+      "policy_violation_per_query": 0.0,
+      "certified_fraction": 0.0,
+      "certificate_errors": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "PreFilter-IVF",
+      "queries": 80,
+      "recall_at_k": 0.89625,
+      "secure_topk_exact": 0.6,
+      "latency_ms": 1.2173077000227295,
+      "policy_violation_per_query": 0.0,
+      "certified_fraction": 0.0,
+      "certificate_errors": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "PACER-A",
+      "queries": 80,
+      "recall_at_k": 0.9899999999999999,
+      "secure_topk_exact": 0.925,
+      "latency_ms": 2.2816292749951117,
+      "policy_violation_per_query": 0.0,
+      "certified_fraction": 0.75,
+      "certificate_errors": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "PACER-C",
+      "queries": 80,
+      "recall_at_k": 1.0,
+      "secure_topk_exact": 1.0,
+      "latency_ms": 3.894293375020652,
+      "policy_violation_per_query": 0.0,
+      "certified_fraction": 1.0,
+      "certificate_errors": 0.0
+    },
+    {
+      "seed": 11,
+      "method": "PACER-X",
+      "queries": 80,
+      "recall_at_k": 1.0,
+      "secure_topk_exact": 1.0,
+      "latency_ms": 3.8890790500033745,
+      "policy_violation_per_query": 0.0,
+      "certified_fraction": 1.0,
+      "certificate_errors": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "PostFilter-IVF",
+      "queries": 80,
+      "recall_at_k": 0.6786458333333334,
+      "secure_topk_exact": 0.225,
+      "latency_ms": 1.163492375030728,
+      "policy_violation_per_query": 0.0,
+      "certified_fraction": 0.0,
+      "certificate_errors": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "PreFilter-IVF",
+      "queries": 80,
+      "recall_at_k": 0.86875,
+      "secure_topk_exact": 0.5625,
+      "latency_ms": 1.173967587521929,
+      "policy_violation_per_query": 0.0,
+      "certified_fraction": 0.0,
+      "certificate_errors": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "PACER-A",
+      "queries": 80,
+      "recall_at_k": 0.9824999999999999,
+      "secure_topk_exact": 0.8875,
+      "latency_ms": 2.2313333500108,
+      "policy_violation_per_query": 0.0,
+      "certified_fraction": 0.75,
+      "certificate_errors": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "PACER-C",
+      "queries": 80,
+      "recall_at_k": 1.0,
+      "secure_topk_exact": 1.0,
+      "latency_ms": 3.825590237477172,
+      "policy_violation_per_query": 0.0,
+      "certified_fraction": 1.0,
+      "certificate_errors": 0.0
+    },
+    {
+      "seed": 23,
+      "method": "PACER-X",
+      "queries": 80,
+      "recall_at_k": 1.0,
+      "secure_topk_exact": 1.0,
+      "latency_ms": 3.9069099250014006,
+      "policy_violation_per_query": 0.0,
+      "certified_fraction": 1.0,
+      "certificate_errors": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "PostFilter-IVF",
+      "queries": 80,
+      "recall_at_k": 0.6756249999999999,
+      "secure_topk_exact": 0.25,
+      "latency_ms": 1.190990337505582,
+      "policy_violation_per_query": 0.0,
+      "certified_fraction": 0.0,
+      "certificate_errors": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "PreFilter-IVF",
+      "queries": 80,
+      "recall_at_k": 0.8850000000000001,
+      "secure_topk_exact": 0.6,
+      "latency_ms": 1.1505121249570038,
+      "policy_violation_per_query": 0.0,
+      "certified_fraction": 0.0,
+      "certificate_errors": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "PACER-A",
+      "queries": 80,
+      "recall_at_k": 0.9925,
+      "secure_topk_exact": 0.925,
+      "latency_ms": 2.41380759998151,
+      "policy_violation_per_query": 0.0,
+      "certified_fraction": 0.75,
+      "certificate_errors": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "PACER-C",
+      "queries": 80,
+      "recall_at_k": 1.0,
+      "secure_topk_exact": 1.0,
+      "latency_ms": 4.074464700033786,
+      "policy_violation_per_query": 0.0,
+      "certified_fraction": 1.0,
+      "certificate_errors": 0.0
+    },
+    {
+      "seed": 37,
+      "method": "PACER-X",
+      "queries": 80,
+      "recall_at_k": 1.0,
+      "secure_topk_exact": 1.0,
+      "latency_ms": 3.9821704624671383,
+      "policy_violation_per_query": 0.0,
+      "certified_fraction": 1.0,
+      "certificate_errors": 0.0
+    }
+  ],
+  "summary": [
+    {
+      "method": "PostFilter-IVF",
+      "metric": "recall_at_k",
+      "mean": 0.6799537037037037,
+      "std": 0.005109753807801107,
+      "min": 0.6756249999999999,
+      "max": 0.6855902777777778
+    },
+    {
+      "method": "PostFilter-IVF",
+      "metric": "secure_topk_exact",
+      "mean": 0.2333333333333333,
+      "std": 0.014433756729740642,
+      "min": 0.225,
+      "max": 0.25
+    },
+    {
+      "method": "PostFilter-IVF",
+      "metric": "latency_ms",
+      "mean": 1.1762882333509121,
+      "std": 0.01384773681701235,
+      "min": 1.163492375030728,
+      "max": 1.190990337505582
+    },
+    {
+      "method": "PostFilter-IVF",
+      "metric": "policy_violation_per_query",
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    {
+      "method": "PostFilter-IVF",
+      "metric": "certified_fraction",
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    {
+      "method": "PostFilter-IVF",
+      "metric": "certificate_errors",
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    {
+      "method": "PreFilter-IVF",
+      "metric": "recall_at_k",
+      "mean": 0.8833333333333334,
+      "std": 0.01382555001919754,
+      "min": 0.86875,
+      "max": 0.89625
+    },
+    {
+      "method": "PreFilter-IVF",
+      "metric": "secure_topk_exact",
+      "mean": 0.5875,
+      "std": 0.021650635094610952,
+      "min": 0.5625,
+      "max": 0.6
+    },
+    {
+      "method": "PreFilter-IVF",
+      "metric": "latency_ms",
+      "mean": 1.1805958041672209,
+      "std": 0.03388749258964049,
+      "min": 1.1505121249570038,
+      "max": 1.2173077000227295
+    },
+    {
+      "method": "PreFilter-IVF",
+      "metric": "policy_violation_per_query",
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    {
+      "method": "PreFilter-IVF",
+      "metric": "certified_fraction",
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    {
+      "method": "PreFilter-IVF",
+      "metric": "certificate_errors",
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    {
+      "method": "PACER-A",
+      "metric": "recall_at_k",
+      "mean": 0.9883333333333333,
+      "std": 0.0052041649986653725,
+      "min": 0.9824999999999999,
+      "max": 0.9925
+    },
+    {
+      "method": "PACER-A",
+      "metric": "secure_topk_exact",
+      "mean": 0.9125,
+      "std": 0.02165063509461102,
+      "min": 0.8875,
+      "max": 0.925
+    },
+    {
+      "method": "PACER-A",
+      "metric": "latency_ms",
+      "mean": 2.308923408329141,
+      "std": 0.09424935151731864,
+      "min": 2.2313333500108,
+      "max": 2.41380759998151
+    },
+    {
+      "method": "PACER-A",
+      "metric": "policy_violation_per_query",
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    {
+      "method": "PACER-A",
+      "metric": "certified_fraction",
+      "mean": 0.75,
+      "std": 0.0,
+      "min": 0.75,
+      "max": 0.75
+    },
+    {
+      "method": "PACER-A",
+      "metric": "certificate_errors",
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    {
+      "method": "PACER-C",
+      "metric": "recall_at_k",
+      "mean": 1.0,
+      "std": 0.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    {
+      "method": "PACER-C",
+      "metric": "secure_topk_exact",
+      "mean": 1.0,
+      "std": 0.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    {
+      "method": "PACER-C",
+      "metric": "latency_ms",
+      "mean": 3.931449437510537,
+      "std": 0.12853036319494726,
+      "min": 3.825590237477172,
+      "max": 4.074464700033786
+    },
+    {
+      "method": "PACER-C",
+      "metric": "policy_violation_per_query",
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    {
+      "method": "PACER-C",
+      "metric": "certified_fraction",
+      "mean": 1.0,
+      "std": 0.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    {
+      "method": "PACER-C",
+      "metric": "certificate_errors",
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    {
+      "method": "PACER-X",
+      "metric": "recall_at_k",
+      "mean": 1.0,
+      "std": 0.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    {
+      "method": "PACER-X",
+      "metric": "secure_topk_exact",
+      "mean": 1.0,
+      "std": 0.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    {
+      "method": "PACER-X",
+      "metric": "latency_ms",
+      "mean": 3.926053145823971,
+      "std": 0.04941001868266118,
+      "min": 3.8890790500033745,
+      "max": 3.9821704624671383
+    },
+    {
+      "method": "PACER-X",
+      "metric": "policy_violation_per_query",
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    {
+      "method": "PACER-X",
+      "metric": "certified_fraction",
+      "mean": 1.0,
+      "std": 0.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    {
+      "method": "PACER-X",
+      "metric": "certificate_errors",
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    }
+  ],
+  "parameters": {
+    "out": "./results/multiseed",
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "n": 8000,
+    "dim": 64,
+    "per_regime": 20,
+    "nlist": 48,
+    "budget": 1600
+  }
+}

@@ -1,0 +1,2 @@
+case_id,qid,tenant_mask,region_mask,dtype_mask,provenance_mask,sensitivity,epoch,visible,summary_false_negative_clusters,pacer_x_exact,pacer_a_recall,pacer_a_certified
+0,-1,0,0,0,0,-1,-1,0,0,1,1.0,0

@@ -1,0 +1,120 @@
+{
+  "n": 9000,
+  "queries": 128,
+  "methods": {
+    "ExactSQL": {
+      "recall_at_k": 1.0,
+      "secure_topk_exact": 1.0,
+      "median_latency_ms": 0.11480700004540267,
+      "candidates": 1270.2578125,
+      "raw_candidates": 9000.0,
+      "certified_fraction": 1.0,
+      "certificate_errors": 0,
+      "certified_sound_fraction": 1.0
+    },
+    "PostFilter-SQL": {
+      "recall_at_k": 0.6507812500000001,
+      "secure_topk_exact": 0.078125,
+      "median_latency_ms": 0.06386649999967631,
+      "candidates": 162.4140625,
+      "raw_candidates": 1118.3046875,
+      "certified_fraction": 0.0,
+      "certificate_errors": 0,
+      "certified_sound_fraction": 1.0
+    },
+    "PACER-A-SQL": {
+      "recall_at_k": 0.9515625000000001,
+      "secure_topk_exact": 0.6171875,
+      "median_latency_ms": 1.2529589999985546,
+      "candidates": 678.28125,
+      "raw_candidates": 4800.0,
+      "certified_fraction": 0.0,
+      "certificate_errors": 0,
+      "certified_sound_fraction": 1.0
+    },
+    "PACER-X-SQL": {
+      "recall_at_k": 1.0,
+      "secure_topk_exact": 1.0,
+      "median_latency_ms": 2.140435499995874,
+      "candidates": 1270.2578125,
+      "raw_candidates": 8779.1484375,
+      "certified_fraction": 1.0,
+      "certificate_errors": 0,
+      "certified_sound_fraction": 1.0
+    }
+  },
+  "by_kind": {
+    "antijoin": {
+      "ExactSQL": {
+        "recall_at_k": 1.0,
+        "secure_topk_exact": 1.0
+      },
+      "PostFilter-SQL": {
+        "recall_at_k": 0.71875,
+        "secure_topk_exact": 0.125
+      },
+      "PACER-A-SQL": {
+        "recall_at_k": 0.959375,
+        "secure_topk_exact": 0.625
+      },
+      "PACER-X-SQL": {
+        "recall_at_k": 1.0,
+        "secure_topk_exact": 1.0
+      }
+    },
+    "dnf": {
+      "ExactSQL": {
+        "recall_at_k": 1.0,
+        "secure_topk_exact": 1.0
+      },
+      "PostFilter-SQL": {
+        "recall_at_k": 0.634375,
+        "secure_topk_exact": 0.03125
+      },
+      "PACER-A-SQL": {
+        "recall_at_k": 0.9406249999999999,
+        "secure_topk_exact": 0.53125
+      },
+      "PACER-X-SQL": {
+        "recall_at_k": 1.0,
+        "secure_topk_exact": 1.0
+      }
+    },
+    "mixed": {
+      "ExactSQL": {
+        "recall_at_k": 1.0,
+        "secure_topk_exact": 1.0
+      },
+      "PostFilter-SQL": {
+        "recall_at_k": 0.7375,
+        "secure_topk_exact": 0.15625
+      },
+      "PACER-A-SQL": {
+        "recall_at_k": 0.9562499999999999,
+        "secure_topk_exact": 0.65625
+      },
+      "PACER-X-SQL": {
+        "recall_at_k": 1.0,
+        "secure_topk_exact": 1.0
+      }
+    },
+    "semijoin": {
+      "ExactSQL": {
+        "recall_at_k": 1.0,
+        "secure_topk_exact": 1.0
+      },
+      "PostFilter-SQL": {
+        "recall_at_k": 0.5125,
+        "secure_topk_exact": 0.0
+      },
+      "PACER-A-SQL": {
+        "recall_at_k": 0.95,
+        "secure_topk_exact": 0.65625
+      },
+      "PACER-X-SQL": {
+        "recall_at_k": 1.0,
+        "secure_topk_exact": 1.0
+      }
+    }
+  }
+}

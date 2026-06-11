@@ -1,0 +1,26 @@
+{
+  "rows": [
+    {
+      "n": 15000,
+      "nlist": 64,
+      "data_generation_ms": 190.1359449998381,
+      "index_build_ms": 249.77326699990954,
+      "logical_structural_bytes_per_record": 33.02753333333333,
+      "python_object_bytes_per_record": 356.5378666666667,
+      "python_object_total_mb": 5.100315093994141
+    },
+    {
+      "n": 60000,
+      "nlist": 96,
+      "data_generation_ms": 804.4456799998443,
+      "index_build_ms": 1018.5408749998714,
+      "logical_structural_bytes_per_record": 39.766333333333336,
+      "python_object_bytes_per_record": 335.8614,
+      "python_object_total_mb": 19.218143463134766
+    }
+  ],
+  "claim_checks": {
+    "has_empirical_python_object_accounting": true,
+    "has_60k_memory_audit": true
+  }
+}

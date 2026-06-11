@@ -1,0 +1,132 @@
+{
+  "schema": "pacer-scale-frontier-v1",
+  "summaries": [
+    {
+      "n": 120000,
+      "nlist": 128,
+      "queries": 16,
+      "method_query_rows": 64,
+      "budget": 2400,
+      "data_generation_ms": 754.8837289999994,
+      "index_build_ms": 4959.706740000001,
+      "index_overhead": {
+        "nlist": 128.0,
+        "assignment_bytes_per_record": 4.0,
+        "centroid_bytes_per_record": 0.2730666666666667,
+        "radius_bytes_per_record": 0.004266666666666667,
+        "summary_bytes_per_record": 7.8832,
+        "signature_bytes_per_record": 7.834133333333333,
+        "slice_posting_bytes_per_record": 5.376966666666666,
+        "bitmap_slice_bytes_per_record": 28.5,
+        "total_structural_bytes_per_record": 46.0375
+      },
+      "methods_summary": {
+        "PostFilter-IVF": {
+          "recall_at_k": 0.5135416666666667,
+          "ordered_exact_secure_topk": 0.125,
+          "raw_candidates_mean": 2400.0,
+          "latency_ms_mean": 60.360559562496974,
+          "latency_ms_p95": 109.27295074999677,
+          "certified_fraction": 0.0,
+          "violations_total": 0
+        },
+        "PACER-A": {
+          "recall_at_k": 0.95,
+          "ordered_exact_secure_topk": 0.8125,
+          "raw_candidates_mean": 683.1875,
+          "latency_ms_mean": 45.75833056249845,
+          "latency_ms_p95": 112.54254699999322,
+          "certified_fraction": 0.75,
+          "violations_total": 0
+        },
+        "PACER-C": {
+          "recall_at_k": 1.0,
+          "ordered_exact_secure_topk": 1.0,
+          "raw_candidates_mean": 5765.25,
+          "latency_ms_mean": 43.08266443750064,
+          "latency_ms_p95": 143.44945075000126,
+          "certified_fraction": 1.0,
+          "violations_total": 0
+        },
+        "PACER-X": {
+          "recall_at_k": 1.0,
+          "ordered_exact_secure_topk": 1.0,
+          "raw_candidates_mean": 5765.25,
+          "latency_ms_mean": 37.36352974999768,
+          "latency_ms_p95": 145.94052299999305,
+          "certified_fraction": 1.0,
+          "violations_total": 0
+        }
+      },
+      "claim_checks": {
+        "pacer_x_exact_failures": 0,
+        "safe_violations_total": 0,
+        "pacer_a_raw_less_than_postfilter": true
+      }
+    },
+    {
+      "n": 240000,
+      "nlist": 160,
+      "queries": 8,
+      "method_query_rows": 32,
+      "budget": 2400,
+      "data_generation_ms": 1506.3307460000033,
+      "index_build_ms": 8686.850035999996,
+      "index_overhead": {
+        "nlist": 160.0,
+        "assignment_bytes_per_record": 4.0,
+        "centroid_bytes_per_record": 0.17066666666666666,
+        "radius_bytes_per_record": 0.0026666666666666666,
+        "summary_bytes_per_record": 7.3036666666666665,
+        "signature_bytes_per_record": 7.273,
+        "slice_posting_bytes_per_record": 5.37985,
+        "bitmap_slice_bytes_per_record": 32.5,
+        "total_structural_bytes_per_record": 49.35685
+      },
+      "methods_summary": {
+        "PostFilter-IVF": {
+          "recall_at_k": 0.4083333333333333,
+          "ordered_exact_secure_topk": 0.125,
+          "raw_candidates_mean": 2400.0,
+          "latency_ms_mean": 72.12566124999853,
+          "latency_ms_p95": 199.81514659999746,
+          "certified_fraction": 0.0,
+          "violations_total": 0
+        },
+        "PACER-A": {
+          "recall_at_k": 0.9625,
+          "ordered_exact_secure_topk": 0.875,
+          "raw_candidates_mean": 835.125,
+          "latency_ms_mean": 58.95988225000082,
+          "latency_ms_p95": 172.6854998499945,
+          "certified_fraction": 0.75,
+          "violations_total": 0
+        },
+        "PACER-C": {
+          "recall_at_k": 1.0,
+          "ordered_exact_secure_topk": 1.0,
+          "raw_candidates_mean": 10873.375,
+          "latency_ms_mean": 132.95404450000171,
+          "latency_ms_p95": 468.75488784999817,
+          "certified_fraction": 1.0,
+          "violations_total": 0
+        },
+        "PACER-X": {
+          "recall_at_k": 1.0,
+          "ordered_exact_secure_topk": 1.0,
+          "raw_candidates_mean": 10873.375,
+          "latency_ms_mean": 120.41219962499916,
+          "latency_ms_p95": 464.86137634999807,
+          "certified_fraction": 1.0,
+          "violations_total": 0
+        }
+      },
+      "claim_checks": {
+        "pacer_x_exact_failures": 0,
+        "safe_violations_total": 0,
+        "pacer_a_raw_less_than_postfilter": true
+      }
+    }
+  ],
+  "rows": 96
+}

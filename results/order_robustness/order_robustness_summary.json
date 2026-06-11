@@ -1,0 +1,8 @@
+{
+  "queries": 80,
+  "rows": 240,
+  "claim_checks": {
+    "row_order_mismatches": 0,
+    "pacer_x_exact_failures": 0
+  }
+}

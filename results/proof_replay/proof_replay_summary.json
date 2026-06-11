@@ -1,0 +1,21 @@
+{
+  "n": 15000,
+  "queries": 80,
+  "rows": 240,
+  "claim_checks": {
+    "summary_false_negative_clusters_total": 0,
+    "certified_proof_failures_without_oracle": 0,
+    "certified_oracle_exact_failures": 0,
+    "pacer_x_oracle_exact_failures": 0
+  },
+  "certified_fraction": {
+    "PACER-A": 0.75,
+    "PACER-NoSummary": 0.0,
+    "PACER-X": 1.0
+  },
+  "mean_processed_clusters": {
+    "PACER-A": 38.875,
+    "PACER-NoSummary": 5.5875,
+    "PACER-X": 52.3125
+  }
+}

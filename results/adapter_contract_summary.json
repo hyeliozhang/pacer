@@ -1,0 +1,18 @@
+{
+  "schema": "pacer-access-path-adapter-contract-v1",
+  "policies": 12,
+  "checked_units": 160,
+  "pruned_units": 224,
+  "witness_rows_checked": 603,
+  "failures": {
+    "visible_rows_in_pruned_units": 0,
+    "slice_omissions": 0,
+    "bound_violations": 0,
+    "witness_failures": 0
+  },
+  "passed": true,
+  "n": 3000,
+  "nlist": 32,
+  "seed": 404,
+  "method_query_policies": 12
+}

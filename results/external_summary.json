@@ -1,0 +1,453 @@
+{
+  "description": "public sklearn feature-matrix supplement; policy/deletion/provenance fields are deterministic database metadata derived from labels and feature statistics",
+  "datasets": {
+    "digits": {
+      "metadata": {
+        "dataset_name": "digits",
+        "source": "sklearn.load_digits",
+        "n": 1797,
+        "dim": 64,
+        "tenants": 10,
+        "regions": 4,
+        "dtypes": 5,
+        "prov_tags": 8,
+        "delete_rate": 0.12,
+        "tenant_cluster_correlation": 1.0,
+        "seed": 1001,
+        "insert_epoch_min": 0,
+        "insert_epoch_max": 5
+      },
+      "queries": 80,
+      "methods": {
+        "ExactSecure": {
+          "recall_at_k": 1.0,
+          "secure_topk_exact": 1.0,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 1.013188000001719,
+          "raw_candidates": 1797.0,
+          "certified_fraction": 1.0,
+          "certificate_false_positive_total": 0
+        },
+        "PostFilter-IVF": {
+          "recall_at_k": 0.9149900793650794,
+          "secure_topk_exact": 0.75,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.5068799999889961,
+          "raw_candidates": 565.7625,
+          "certified_fraction": 0.0,
+          "certificate_false_positive_total": 0
+        },
+        "AdaptivePostFilter-IVF": {
+          "recall_at_k": 1.0,
+          "secure_topk_exact": 1.0,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 2.2302400000171474,
+          "raw_candidates": 1797.0,
+          "certified_fraction": 0.0,
+          "certificate_false_positive_total": 0
+        },
+        "TenantPartition-IVF": {
+          "recall_at_k": 0.9149900793650794,
+          "secure_topk_exact": 0.75,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.4255190000321818,
+          "raw_candidates": 565.7625,
+          "certified_fraction": 0.0,
+          "certificate_false_positive_total": 0
+        },
+        "PreFilter-IVF": {
+          "recall_at_k": 0.9649999999999999,
+          "secure_topk_exact": 0.85,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.80523900010121,
+          "raw_candidates": 436.4125,
+          "certified_fraction": 0.0,
+          "certificate_false_positive_total": 0
+        },
+        "PACER-A": {
+          "recall_at_k": 0.99,
+          "secure_topk_exact": 0.925,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.9717845000523084,
+          "raw_candidates": 254.5125,
+          "certified_fraction": 0.75,
+          "certificate_false_positive_total": 0
+        },
+        "PACER-C": {
+          "recall_at_k": 1.0,
+          "secure_topk_exact": 1.0,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.9465919999911421,
+          "raw_candidates": 522.4875,
+          "certified_fraction": 1.0,
+          "certificate_false_positive_total": 0
+        },
+        "PACER-X": {
+          "recall_at_k": 1.0,
+          "secure_topk_exact": 1.0,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.8662085001560627,
+          "raw_candidates": 522.4875,
+          "certified_fraction": 1.0,
+          "certificate_false_positive_total": 0
+        },
+        "StaleNoRecheck": {
+          "recall_at_k": 0.8487400793650794,
+          "secure_topk_exact": 0.3375,
+          "violations_per_query": 0.7875,
+          "median_latency_ms": 0.5009294999354097,
+          "raw_candidates": 565.7625,
+          "certified_fraction": 0.0,
+          "certificate_false_positive_total": 0
+        },
+        "NaiveNoPolicy": {
+          "recall_at_k": 0.40640873015873014,
+          "secure_topk_exact": 0.1125,
+          "violations_per_query": 8.3125,
+          "median_latency_ms": 0.15240100003666157,
+          "raw_candidates": 565.7625,
+          "certified_fraction": 0.0,
+          "certificate_false_positive_total": 0
+        }
+      },
+      "nlist": 28,
+      "candidate_budget": 720
+    },
+    "breast-cancer": {
+      "metadata": {
+        "dataset_name": "breast-cancer",
+        "source": "sklearn.load_breast_cancer",
+        "n": 569,
+        "dim": 30,
+        "tenants": 2,
+        "regions": 6,
+        "dtypes": 5,
+        "prov_tags": 8,
+        "delete_rate": 0.1,
+        "tenant_cluster_correlation": 1.0,
+        "seed": 2001,
+        "insert_epoch_min": 0,
+        "insert_epoch_max": 5
+      },
+      "queries": 80,
+      "methods": {
+        "ExactSecure": {
+          "recall_at_k": 1.0,
+          "secure_topk_exact": 1.0,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.34613249999893014,
+          "raw_candidates": 569.0,
+          "certified_fraction": 1.0,
+          "certificate_false_positive_total": 0
+        },
+        "PostFilter-IVF": {
+          "recall_at_k": 0.9508333333333333,
+          "secure_topk_exact": 0.8375,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.23363700006484578,
+          "raw_candidates": 230.0375,
+          "certified_fraction": 0.0,
+          "certificate_false_positive_total": 0
+        },
+        "AdaptivePostFilter-IVF": {
+          "recall_at_k": 1.0,
+          "secure_topk_exact": 1.0,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.9287754999149911,
+          "raw_candidates": 569.0,
+          "certified_fraction": 0.0,
+          "certificate_false_positive_total": 0
+        },
+        "TenantPartition-IVF": {
+          "recall_at_k": 0.9508333333333333,
+          "secure_topk_exact": 0.8375,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.2620270000761593,
+          "raw_candidates": 230.0375,
+          "certified_fraction": 0.0,
+          "certificate_false_positive_total": 0
+        },
+        "PreFilter-IVF": {
+          "recall_at_k": 0.9962499999999999,
+          "secure_topk_exact": 0.975,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.4847870000048715,
+          "raw_candidates": 206.9625,
+          "certified_fraction": 0.0,
+          "certificate_false_positive_total": 0
+        },
+        "PACER-A": {
+          "recall_at_k": 1.0,
+          "secure_topk_exact": 1.0,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.7024059999594101,
+          "raw_candidates": 95.175,
+          "certified_fraction": 0.75,
+          "certificate_false_positive_total": 0
+        },
+        "PACER-C": {
+          "recall_at_k": 1.0,
+          "secure_topk_exact": 1.0,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.7013659999302035,
+          "raw_candidates": 143.5,
+          "certified_fraction": 1.0,
+          "certificate_false_positive_total": 0
+        },
+        "PACER-X": {
+          "recall_at_k": 1.0,
+          "secure_topk_exact": 1.0,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.6997684998850673,
+          "raw_candidates": 143.5,
+          "certified_fraction": 1.0,
+          "certificate_false_positive_total": 0
+        },
+        "StaleNoRecheck": {
+          "recall_at_k": 0.8970833333333333,
+          "secure_topk_exact": 0.4375,
+          "violations_per_query": 0.65,
+          "median_latency_ms": 0.22729750003236404,
+          "raw_candidates": 230.0375,
+          "certified_fraction": 0.0,
+          "certificate_false_positive_total": 0
+        },
+        "NaiveNoPolicy": {
+          "recall_at_k": 0.44940476190476186,
+          "secure_topk_exact": 0.1,
+          "violations_per_query": 6.4375,
+          "median_latency_ms": 0.08603849994415214,
+          "raw_candidates": 230.0375,
+          "certified_fraction": 0.0,
+          "certificate_false_positive_total": 0
+        }
+      },
+      "nlist": 18,
+      "candidate_budget": 240
+    },
+    "wine": {
+      "metadata": {
+        "dataset_name": "wine",
+        "source": "sklearn.load_wine",
+        "n": 178,
+        "dim": 13,
+        "tenants": 3,
+        "regions": 6,
+        "dtypes": 5,
+        "prov_tags": 8,
+        "delete_rate": 0.1,
+        "tenant_cluster_correlation": 1.0,
+        "seed": 3001,
+        "insert_epoch_min": 0,
+        "insert_epoch_max": 5
+      },
+      "queries": 80,
+      "methods": {
+        "ExactSecure": {
+          "recall_at_k": 1.0,
+          "secure_topk_exact": 1.0,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.1344169999129008,
+          "raw_candidates": 178.0,
+          "certified_fraction": 1.0,
+          "certificate_false_positive_total": 0
+        },
+        "PostFilter-IVF": {
+          "recall_at_k": 0.9825000000000002,
+          "secure_topk_exact": 0.9,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.14743949998319295,
+          "raw_candidates": 115.675,
+          "certified_fraction": 0.0,
+          "certificate_false_positive_total": 0
+        },
+        "AdaptivePostFilter-IVF": {
+          "recall_at_k": 1.0,
+          "secure_topk_exact": 1.0,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.5314514999099629,
+          "raw_candidates": 178.0,
+          "certified_fraction": 0.0,
+          "certificate_false_positive_total": 0
+        },
+        "TenantPartition-IVF": {
+          "recall_at_k": 0.9825000000000002,
+          "secure_topk_exact": 0.9,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.15671050005039433,
+          "raw_candidates": 115.675,
+          "certified_fraction": 0.0,
+          "certificate_false_positive_total": 0
+        },
+        "PreFilter-IVF": {
+          "recall_at_k": 1.0,
+          "secure_topk_exact": 1.0,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.4416414999468543,
+          "raw_candidates": 80.55,
+          "certified_fraction": 0.0,
+          "certificate_false_positive_total": 0
+        },
+        "PACER-A": {
+          "recall_at_k": 1.0,
+          "secure_topk_exact": 1.0,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.4656959999920218,
+          "raw_candidates": 42.95,
+          "certified_fraction": 1.0,
+          "certificate_false_positive_total": 0
+        },
+        "PACER-C": {
+          "recall_at_k": 1.0,
+          "secure_topk_exact": 1.0,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.38531500001681707,
+          "raw_candidates": 42.95,
+          "certified_fraction": 1.0,
+          "certificate_false_positive_total": 0
+        },
+        "PACER-X": {
+          "recall_at_k": 1.0,
+          "secure_topk_exact": 1.0,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.37453700008427404,
+          "raw_candidates": 42.95,
+          "certified_fraction": 1.0,
+          "certificate_false_positive_total": 0
+        },
+        "StaleNoRecheck": {
+          "recall_at_k": 0.9337500000000001,
+          "secure_topk_exact": 0.4875,
+          "violations_per_query": 0.6375,
+          "median_latency_ms": 0.13906799995311303,
+          "raw_candidates": 115.675,
+          "certified_fraction": 0.0,
+          "certificate_false_positive_total": 0
+        },
+        "NaiveNoPolicy": {
+          "recall_at_k": 0.5890773809523809,
+          "secure_topk_exact": 0.0625,
+          "violations_per_query": 6.2875,
+          "median_latency_ms": 0.06401600001026964,
+          "raw_candidates": 115.675,
+          "certified_fraction": 0.0,
+          "certificate_false_positive_total": 0
+        }
+      },
+      "nlist": 12,
+      "candidate_budget": 180
+    },
+    "diabetes": {
+      "metadata": {
+        "dataset_name": "diabetes",
+        "source": "sklearn.load_diabetes",
+        "n": 442,
+        "dim": 10,
+        "tenants": 6,
+        "regions": 6,
+        "dtypes": 5,
+        "prov_tags": 8,
+        "delete_rate": 0.1,
+        "tenant_cluster_correlation": 1.0,
+        "seed": 3501,
+        "insert_epoch_min": 0,
+        "insert_epoch_max": 5
+      },
+      "queries": 80,
+      "methods": {
+        "ExactSecure": {
+          "recall_at_k": 1.0,
+          "secure_topk_exact": 1.0,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.29872799996155663,
+          "raw_candidates": 442.0,
+          "certified_fraction": 1.0,
+          "certificate_false_positive_total": 0
+        },
+        "PostFilter-IVF": {
+          "recall_at_k": 0.9477083333333335,
+          "secure_topk_exact": 0.8,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.23441499990894954,
+          "raw_candidates": 215.6625,
+          "certified_fraction": 0.0,
+          "certificate_false_positive_total": 0
+        },
+        "AdaptivePostFilter-IVF": {
+          "recall_at_k": 1.0,
+          "secure_topk_exact": 1.0,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.8647930000051929,
+          "raw_candidates": 442.0,
+          "certified_fraction": 0.0,
+          "certificate_false_positive_total": 0
+        },
+        "TenantPartition-IVF": {
+          "recall_at_k": 0.9477083333333335,
+          "secure_topk_exact": 0.8,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.22306649987058336,
+          "raw_candidates": 215.6625,
+          "certified_fraction": 0.0,
+          "certificate_false_positive_total": 0
+        },
+        "PreFilter-IVF": {
+          "recall_at_k": 0.99125,
+          "secure_topk_exact": 0.9375,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.48924550014817214,
+          "raw_candidates": 156.75,
+          "certified_fraction": 0.0,
+          "certificate_false_positive_total": 0
+        },
+        "PACER-A": {
+          "recall_at_k": 0.99875,
+          "secure_topk_exact": 0.9875,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.6255579999105976,
+          "raw_candidates": 70.5375,
+          "certified_fraction": 0.7625,
+          "certificate_false_positive_total": 0
+        },
+        "PACER-C": {
+          "recall_at_k": 1.0,
+          "secure_topk_exact": 1.0,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.5819255000005796,
+          "raw_candidates": 92.025,
+          "certified_fraction": 1.0,
+          "certificate_false_positive_total": 0
+        },
+        "PACER-X": {
+          "recall_at_k": 1.0,
+          "secure_topk_exact": 1.0,
+          "violations_per_query": 0.0,
+          "median_latency_ms": 0.561142000037762,
+          "raw_candidates": 92.025,
+          "certified_fraction": 1.0,
+          "certificate_false_positive_total": 0
+        },
+        "StaleNoRecheck": {
+          "recall_at_k": 0.9052083333333332,
+          "secure_topk_exact": 0.4875,
+          "violations_per_query": 0.5625,
+          "median_latency_ms": 0.2460915001165631,
+          "raw_candidates": 215.6625,
+          "certified_fraction": 0.0,
+          "certificate_false_positive_total": 0
+        },
+        "NaiveNoPolicy": {
+          "recall_at_k": 0.553968253968254,
+          "secure_topk_exact": 0.1375,
+          "violations_per_query": 10.4125,
+          "median_latency_ms": 0.0918915000056586,
+          "raw_candidates": 215.6625,
+          "certified_fraction": 0.0,
+          "certificate_false_positive_total": 0
+        }
+      },
+      "nlist": 16,
+      "candidate_budget": 220
+    }
+  }
+}

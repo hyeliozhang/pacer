@@ -1,0 +1,57 @@
+\documentclass[tikz,border=1.2pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usetikzlibrary{arrows.meta,calc,shapes.geometric}
+\definecolor{Ink}{HTML}{111827}
+\definecolor{Mid}{HTML}{4B5563}
+\definecolor{Rule}{HTML}{AEB7C2}
+\definecolor{Pale}{HTML}{F7F8FA}
+\definecolor{Accent}{HTML}{1F5A85}
+\begin{document}
+\begin{tikzpicture}[
+  x=1cm,y=1cm,
+  >={Latex[length=1.45mm,width=.95mm]},
+  every node/.style={font=\rmfamily\scriptsize,text=Ink},
+  stepbox/.style={draw=Rule,line width=.42pt,rounded corners=.45mm,fill=white,
+    align=center,inner xsep=3pt,inner ysep=2.5pt,minimum width=3.55cm,minimum height=.62cm},
+  side/.style={draw=Rule,line width=.38pt,fill=Pale,align=center,
+    inner xsep=3pt,inner ysep=2pt,minimum width=2.45cm,minimum height=.50cm},
+  tag/.style={draw=Rule,line width=.36pt,rounded corners=1.5mm,fill=white,
+    align=center,inner xsep=3.5pt,inner ysep=1.5pt},
+  arrow/.style={->,draw=Ink!70,line width=.44pt},
+  soft/.style={->,draw=Mid!70,line width=.34pt},
+]
+\path[use as bounding box] (0,0) rectangle (8.42,4.18);
+
+\node[stepbox] (frontier) at (2.38,3.54)
+  {$U^\star=\arg\max_U \overline{s}(U)$};
+\node[stepbox] (slice) at (2.38,2.70)
+  {open slice; fetch candidate rows};
+\node[stepbox,draw=Accent,line width=.55pt] (verify) at (2.38,1.86)
+  {verify $P(r)$, epoch, witness, score};
+\node[diamond,aspect=2.25,draw=Rule,line width=.42pt,fill=white,
+  align=center,inner sep=1.4pt,minimum width=1.95cm,minimum height=.70cm] (stop) at (2.38,.84)
+  {$\Delta=0$\\or budget?};
+
+\draw[arrow] (frontier) -- (slice);
+\draw[arrow] (slice) -- (verify);
+\draw[arrow] (verify) -- (stop);
+\draw[arrow] (stop.west) -| (.42,3.54) -- (frontier.west);
+
+\draw[densely dashed,draw=Accent!70,line width=.40pt] (4.46,.46) -- (4.46,3.86);
+
+\node[side] (summ) at (6.35,3.32) {conservative\\[-1pt]unit summaries};
+\node[side] (facts) at (6.35,2.28) {row facts\\[-1pt]and witnesses};
+\node[side] (proof) at (6.35,1.24) {replayable\\[-1pt]certificate};
+\draw[soft] (summ.west) -- ($(frontier.east)+(.05,0)$);
+\draw[soft] (facts.west) -- ($(verify.east)+(.05,0)$);
+\draw[soft] (verify.east) -- (proof.west);
+
+\node[tag] (a) at (5.22,.45) {checked};
+\node[tag] (c) at (6.36,.45) {refined};
+\node[tag] (x) at (7.45,.45) {exact};
+\draw[soft] (stop.east) -- (a.west);
+\draw[draw=Rule,line width=.34pt] (a.east)--(c.west);
+\draw[draw=Rule,line width=.34pt] (c.east)--(x.west);
+\end{tikzpicture}
+\end{document}

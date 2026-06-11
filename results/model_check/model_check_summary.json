@@ -1,0 +1,25 @@
+{
+  "n": 14,
+  "dim": 5,
+  "enumerated_policy_cases": 5832,
+  "cases_with_nonempty_visible_answer": 4518,
+  "claim_checks": {
+    "summary_false_negative_clusters": 0,
+    "certified_proof_failures_without_oracle": 0,
+    "pacer_x_exact_failures": 0,
+    "safe_output_violations": 0,
+    "pacer_a_certified_cases": 5456,
+    "pacer_a_certified_exact_failures": 0
+  },
+  "domains": {
+    "tenants": 2,
+    "regions": 2,
+    "dtypes": 2,
+    "provenance_tags": 2,
+    "epochs": [
+      0,
+      5
+    ],
+    "query_vectors": 3
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "n": 22000,
+  "dim": 96,
+  "queries": 72,
+  "rows": 432,
+  "index_build_ms": 423.5115420001421,
+  "methods": {
+    "BitmapSlice-Exact": {
+      "recall_at_k": 1.0,
+      "secure_topk_exact": 1.0,
+      "raw_candidates": 204.63888888888889,
+      "latency_ms": 0.8020687638747859,
+      "violations": 0,
+      "certified_fraction": 1.0
+    },
+    "PACER-A": {
+      "recall_at_k": 1.0,
+      "secure_topk_exact": 1.0,
+      "raw_candidates": 189.875,
+      "latency_ms": 1.8635727361002965,
+      "violations": 0,
+      "certified_fraction": 0.9583333333333334
+    },
+    "PACER-C": {
+      "recall_at_k": 1.0,
+      "secure_topk_exact": 1.0,
+      "raw_candidates": 204.63888888888889,
+      "latency_ms": 1.9027406805460285,
+      "violations": 0,
+      "certified_fraction": 1.0
+    },
+    "PACER-X": {
+      "recall_at_k": 1.0,
+      "secure_topk_exact": 1.0,
+      "raw_candidates": 204.63888888888889,
+      "latency_ms": 1.852242736115765,
+      "violations": 0,
+      "certified_fraction": 1.0
+    },
+    "PostFilter-IVF": {
+      "recall_at_k": 0.783779761904762,
+      "secure_topk_exact": 0.6111111111111112,
+      "raw_candidates": 2490.0138888888887,
+      "latency_ms": 2.6838807499795316,
+      "violations": 0,
+      "certified_fraction": 0.0
+    },
+    "PreFilter-IVF": {
+      "recall_at_k": 0.9833333333333335,
+      "secure_topk_exact": 0.9444444444444444,
+      "raw_candidates": 1255.8472222222222,
+      "latency_ms": 4.207936333307948,
+      "violations": 0,
+      "certified_fraction": 0.0
+    }
+  },
+  "claim_checks": {
+    "safe_method_violations": 0,
+    "pacer_c_exact_failures": 0,
+    "pacer_x_exact_failures": 0,
+    "pacer_a_beats_postfilter_exactness": true
+  }
+}

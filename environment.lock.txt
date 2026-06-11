@@ -1,0 +1,10 @@
+# Reviewer environment lock used for the PACER artifact gates.
+# Python packages are intentionally minimal; the prototype uses CPU-only NumPy.
+python==3.11
+numpy>=1.24
+matplotlib>=3.7
+scikit-learn>=1.8
+Pillow>=10.0
+PyMuPDF>=1.23
+pytest>=8.0
+system: poppler-utils, ghostscript, TeX Live with IEEEtran-compatible LaTeX/BibTeX

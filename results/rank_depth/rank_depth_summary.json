@@ -1,0 +1,62 @@
+{
+  "description": "constructive witness that fixed global candidate budgets cannot guarantee selected top-k without inspecting to visible rank depth",
+  "k": 10,
+  "prefixes": [
+    0,
+    25,
+    100,
+    250,
+    600,
+    1200
+  ],
+  "budgets": [
+    50,
+    128,
+    256,
+    512,
+    1024
+  ],
+  "by_prefix": {
+    "0": {
+      "required_rank_depth": 10,
+      "smallest_tested_exact_budget": 50,
+      "min_recall_tested": 1.0,
+      "max_recall_tested": 1.0
+    },
+    "25": {
+      "required_rank_depth": 35,
+      "smallest_tested_exact_budget": 50,
+      "min_recall_tested": 1.0,
+      "max_recall_tested": 1.0
+    },
+    "100": {
+      "required_rank_depth": 110,
+      "smallest_tested_exact_budget": 128,
+      "min_recall_tested": 0.0,
+      "max_recall_tested": 1.0
+    },
+    "250": {
+      "required_rank_depth": 260,
+      "smallest_tested_exact_budget": 512,
+      "min_recall_tested": 0.0,
+      "max_recall_tested": 1.0
+    },
+    "600": {
+      "required_rank_depth": 610,
+      "smallest_tested_exact_budget": 1024,
+      "min_recall_tested": 0.0,
+      "max_recall_tested": 1.0
+    },
+    "1200": {
+      "required_rank_depth": 1210,
+      "smallest_tested_exact_budget": null,
+      "min_recall_tested": 0.0,
+      "max_recall_tested": 0.0
+    }
+  },
+  "claim_checks": {
+    "zero_output_violations": true,
+    "budget_below_rank_depth_has_failure": 13,
+    "certifying_scan_exact_all": 0
+  }
+}

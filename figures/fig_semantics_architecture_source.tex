@@ -1,0 +1,65 @@
+\documentclass[tikz,border=1.2pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usetikzlibrary{arrows.meta,calc,positioning}
+\definecolor{Ink}{HTML}{111827}
+\definecolor{Mid}{HTML}{4B5563}
+\definecolor{Rule}{HTML}{AEB7C2}
+\definecolor{Pale}{HTML}{F7F8FA}
+\definecolor{Accent}{HTML}{1F5A85}
+\begin{document}
+\begin{tikzpicture}[
+  x=1cm,y=1cm,
+  >={Latex[length=1.55mm,width=1.0mm]},
+  every node/.style={font=\rmfamily\scriptsize,text=Ink},
+  box/.style={draw=Rule,line width=.42pt,rounded corners=.45mm,fill=white,
+    align=center,inner xsep=3pt,inner ysep=2.5pt,minimum height=.76cm},
+  store/.style={draw=Rule,line width=.38pt,fill=Pale,align=center,
+    inner xsep=3pt,inner ysep=2pt,minimum height=.52cm},
+  tag/.style={draw=Rule,line width=.36pt,rounded corners=1.6mm,fill=white,
+    align=center,inner xsep=4pt,inner ysep=1.5pt},
+  arrow/.style={->,draw=Ink!70,line width=.48pt},
+  soft/.style={->,draw=Mid!70,line width=.36pt},
+]
+\path[use as bounding box] (0,0) rectangle (17.25,3.52);
+
+\node[box,minimum width=2.10cm] (query) at (1.42,2.72)
+  {$q,k,P,t$\\[-1pt]logical top-$k$};
+\node[box,minimum width=3.00cm] (units) at (4.66,2.72)
+  {$U_i,\ \overline{s}(U_i)$\\[-1pt]possible visible units};
+\node[box,minimum width=2.95cm] (rows) at (8.28,2.72)
+  {$r,\ s(q,r)$\\[-1pt]candidate row stream};
+\node[box,draw=Accent,line width=.55pt,minimum width=3.20cm] (check) at (11.98,2.72)
+  {$\mathsf{Vis}_t(r),\ W_r$\\[-1pt]row verifier};
+\node[box,minimum width=2.15cm] (answer) at (15.42,2.72)
+  {$A_k,\ \Delta$\\[-1pt]rows and gap};
+
+\draw[arrow] (query.east) -- (units.west);
+\draw[arrow] (units.east) -- (rows.west);
+\draw[arrow] (rows.east) -- (check.west);
+\draw[arrow] (check.east) -- (answer.west);
+
+\node[store,minimum width=2.36cm] (policy) at (3.46,1.38)
+  {policy and tenant\\[-1pt]summaries};
+\node[store,minimum width=2.36cm] (bounds) at (6.28,1.38)
+  {score upper\\[-1pt]bounds};
+\node[store,minimum width=2.36cm] (epoch) at (10.78,1.38)
+  {insertion/deletion\\[-1pt]epochs};
+\node[store,minimum width=2.36cm] (prov) at (13.66,1.38)
+  {provenance\\[-1pt]witnesses};
+
+\draw[soft] (policy.north) -- ($(units.south)+(-.62,0)$);
+\draw[soft] (bounds.north) -- ($(units.south)+(.62,0)$);
+\draw[soft] (epoch.north) -- ($(check.south)+(-.62,0)$);
+\draw[soft] (prov.north) -- ($(check.south)+(.62,0)$);
+
+\draw[densely dashed,draw=Accent!70,line width=.42pt] (10.05,.55) -- (10.05,3.22);
+
+\node[tag] (a) at (13.70,.58) {checked};
+\node[tag] (c) at (15.00,.58) {refined};
+\node[tag] (x) at (16.22,.58) {exact};
+\draw[soft] (answer.south) |- (c.north);
+\draw[draw=Rule,line width=.36pt] (a.east) -- (c.west);
+\draw[draw=Rule,line width=.36pt] (c.east) -- (x.west);
+\end{tikzpicture}
+\end{document}

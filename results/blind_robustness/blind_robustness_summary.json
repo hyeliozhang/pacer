@@ -1,0 +1,125 @@
+{
+  "manifest": {
+    "purpose": "frozen_parameter_blind_robustness_audit",
+    "n": 3500,
+    "dim": 64,
+    "nlist": 48,
+    "candidate_budget": 700,
+    "k": 10,
+    "per_regime": 4,
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "correlations": [
+      "positive",
+      "independent",
+      "negative"
+    ],
+    "delete_rates": [
+      0.0,
+      0.12,
+      0.24
+    ],
+    "tenant_cluster_correlation": {
+      "positive": 0.82,
+      "independent": 0.72,
+      "negative": 0.72
+    },
+    "frozen_methods": [
+      "PostFilter-IVF",
+      "PreFilter-IVF",
+      "BitmapSlice-Exact",
+      "PACER-A",
+      "PACER-C",
+      "PACER-X"
+    ],
+    "no_tuning_rule": "Budgets, k, nlist, and method parameters are fixed before any configuration is evaluated."
+  },
+  "manifest_sha256": "c12f7ccdbd8ffd7a769d7810588820775584af617c89a385eda9152c3b1999e2",
+  "configs": 27,
+  "queries_per_config": 16,
+  "query_method_rows": 2592,
+  "methods": {
+    "PostFilter-IVF": {
+      "mean_recall": 0.45783730158730157,
+      "min_recall_by_config": 0.2875,
+      "p05_recall_by_config": 0.2875,
+      "mean_exact": 0.11574074074074074,
+      "min_exact_by_config": 0.0,
+      "p05_exact_by_config": 0.0,
+      "mean_raw_candidates": 584.074074074074,
+      "mean_latency_ms": 0.6968649143501622,
+      "total_violations": 0
+    },
+    "PreFilter-IVF": {
+      "mean_recall": 0.8291666666666666,
+      "min_recall_by_config": 0.775,
+      "p05_recall_by_config": 0.78125,
+      "mean_exact": 0.5439814814814815,
+      "min_exact_by_config": 0.5,
+      "p05_exact_by_config": 0.5,
+      "mean_raw_candidates": 390.56018518518516,
+      "mean_latency_ms": 1.2007510416756977,
+      "total_violations": 0
+    },
+    "BitmapSlice-Exact": {
+      "mean_recall": 1.0,
+      "min_recall_by_config": 1.0,
+      "p05_recall_by_config": 1.0,
+      "mean_exact": 1.0,
+      "min_exact_by_config": 1.0,
+      "p05_exact_by_config": 1.0,
+      "mean_raw_candidates": 464.275462962963,
+      "mean_latency_ms": 0.9393763402903864,
+      "total_violations": 0
+    },
+    "PACER-A": {
+      "mean_recall": 0.9780092592592593,
+      "min_recall_by_config": 0.925,
+      "p05_recall_by_config": 0.93125,
+      "mean_exact": 0.875,
+      "min_exact_by_config": 0.8125,
+      "p05_exact_by_config": 0.8125,
+      "mean_raw_candidates": 201.3726851851852,
+      "mean_latency_ms": 1.715982043984249,
+      "total_violations": 0
+    },
+    "PACER-C": {
+      "mean_recall": 1.0,
+      "min_recall_by_config": 1.0,
+      "p05_recall_by_config": 1.0,
+      "mean_exact": 1.0,
+      "min_exact_by_config": 1.0,
+      "p05_exact_by_config": 1.0,
+      "mean_raw_candidates": 464.275462962963,
+      "mean_latency_ms": 3.350401097222815,
+      "total_violations": 0
+    },
+    "PACER-X": {
+      "mean_recall": 1.0,
+      "min_recall_by_config": 1.0,
+      "p05_recall_by_config": 1.0,
+      "mean_exact": 1.0,
+      "min_exact_by_config": 1.0,
+      "p05_exact_by_config": 1.0,
+      "mean_raw_candidates": 464.275462962963,
+      "mean_latency_ms": 3.421055488428448,
+      "total_violations": 0
+    }
+  },
+  "claim_checks": {
+    "config_count": 27,
+    "query_method_rows": 2592,
+    "manifest_sha256": "c12f7ccdbd8ffd7a769d7810588820775584af617c89a385eda9152c3b1999e2",
+    "all_safe_method_violations": 0,
+    "pacer_a_beats_postfilter_exact_configs": 27,
+    "pacer_a_beats_postfilter_raw_configs": 27,
+    "pacer_c_exact_configs": 27,
+    "pacer_x_exact_configs": 27,
+    "pacer_c_certificate_errors": 0,
+    "pacer_x_certificate_errors": 0
+  },
+  "runtime_seconds": 22.622
+}

@@ -1,0 +1,31 @@
+{
+  "epochs": 9,
+  "queries": 180,
+  "methods": {
+    "BaseOnly-Stale": {
+      "recall_at_k": 0.8820370370370371,
+      "secure_topk_exact": 0.6055555555555555,
+      "raw_checks": 905.8111111111111,
+      "rebuild_ms": 0.0
+    },
+    "DeltaPACER": {
+      "recall_at_k": 1.0,
+      "secure_topk_exact": 1.0,
+      "raw_checks": 1829.588888888889,
+      "rebuild_ms": 0.0
+    },
+    "FreshSlice-Rebuild": {
+      "recall_at_k": 1.0,
+      "secure_topk_exact": 1.0,
+      "raw_checks": 1010.3666666666667,
+      "rebuild_ms": 141.21704055555205
+    }
+  },
+  "claim_checks": {
+    "delta_pacer_exact_failures": 0,
+    "delta_pacer_recall_failures": 0,
+    "base_only_stale_failures": 71,
+    "fresh_rebuild_exact_failures": 0,
+    "compactions": 4
+  }
+}

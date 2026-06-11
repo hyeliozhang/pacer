@@ -1,0 +1,54 @@
+{
+  "n": 12000,
+  "queries": 48,
+  "tenants": 160,
+  "regions": 24,
+  "dtypes": 12,
+  "build_ms": 233.79395200004183,
+  "summary": {
+    "ExactSecure": {
+      "recall_at_k": 1.0,
+      "secure_topk_exact": 1.0,
+      "violations": 0,
+      "latency_ms": 7.954706166662125,
+      "raw_candidates": 12000.0
+    },
+    "BitmapSlice-Exact": {
+      "recall_at_k": 1.0,
+      "secure_topk_exact": 1.0,
+      "violations": 0,
+      "latency_ms": 0.2619119999991426,
+      "raw_candidates": 39.916666666666664
+    },
+    "PostFilter-IVF": {
+      "recall_at_k": 0.4083333333333334,
+      "secure_topk_exact": 0.020833333333333332,
+      "violations": 0,
+      "latency_ms": 1.5281541874969662,
+      "raw_candidates": 1524.7291666666667
+    },
+    "PreFilter-IVF": {
+      "recall_at_k": 0.8229166666666666,
+      "secure_topk_exact": 0.25,
+      "violations": 0,
+      "latency_ms": 37.79855564582135,
+      "raw_candidates": 1680.6666666666667
+    },
+    "PACER-A": {
+      "recall_at_k": 1.0,
+      "secure_topk_exact": 1.0,
+      "violations": 0,
+      "latency_ms": 2.1450399374979647,
+      "raw_candidates": 39.916666666666664
+    },
+    "PACER-X": {
+      "recall_at_k": 1.0,
+      "secure_topk_exact": 1.0,
+      "violations": 0,
+      "latency_ms": 2.076748708333298,
+      "raw_candidates": 39.916666666666664
+    }
+  },
+  "max_tenant": 159,
+  "bitmask_width_ok": 1
+}

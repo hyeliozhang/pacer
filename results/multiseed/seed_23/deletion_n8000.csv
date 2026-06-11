@@ -1,0 +1,10 @@
+epoch,queries,stale_residues_in_index,pacer_deleted_results,pacer_certify_deleted_results,stale_no_recheck_deleted_results,naive_deleted_results
+1,32,72,0,0,68,108
+2,32,144,0,0,53,76
+3,32,257,0,0,36,51
+4,32,372,0,0,22,32
+5,32,480,0,0,12,25
+6,32,644,0,0,13,32
+7,32,765,0,0,17,38
+8,32,838,0,0,18,39
+9,32,885,0,0,20,40

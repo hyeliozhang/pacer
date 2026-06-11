@@ -1,0 +1,16 @@
+% Scale audit: columns combine recall/exactness with raw identifiers and build/metadata cost.
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Scale &
+\begin{tabular}[c]{@{}c@{}}PostFilter\\rec., raw\end{tabular} &
+\begin{tabular}[c]{@{}c@{}}PACER-A\\rec., raw\end{tabular} &
+\begin{tabular}[c]{@{}c@{}}A\\ms\end{tabular} &
+\begin{tabular}[c]{@{}c@{}}PACER-X\\exact, raw\end{tabular} &
+\begin{tabular}[c]{@{}c@{}}Build\\ms, B/row\end{tabular}\\
+\midrule
+15K & 0.610/1893 & 0.981/707 & 3.6 & 1.000/1982 & 250/33.0\\
+60K & 0.521/2400 & 0.967/688 & 7.4 & 1.000/3823 & 1019/39.8\\
+120K & 0.514/2400 & 0.950/683 & 45.8 & 1.000/5765 & 4960/46.0\\
+240K & 0.408/2400 & 0.963/835 & 59.0 & 1.000/10873 & 8687/49.4\\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,38 @@
+{
+  "candidate_budget": 700,
+  "correlations": [
+    "positive",
+    "independent",
+    "negative"
+  ],
+  "delete_rates": [
+    0.0,
+    0.12,
+    0.24
+  ],
+  "dim": 64,
+  "frozen_methods": [
+    "PostFilter-IVF",
+    "PreFilter-IVF",
+    "BitmapSlice-Exact",
+    "PACER-A",
+    "PACER-C",
+    "PACER-X"
+  ],
+  "k": 10,
+  "n": 3500,
+  "nlist": 48,
+  "no_tuning_rule": "Budgets, k, nlist, and method parameters are fixed before any configuration is evaluated.",
+  "per_regime": 4,
+  "purpose": "frozen_parameter_blind_robustness_audit",
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "tenant_cluster_correlation": {
+    "independent": 0.72,
+    "negative": 0.72,
+    "positive": 0.82
+  }
+}

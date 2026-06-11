@@ -1,0 +1,103 @@
+{
+  "n": 15000,
+  "queries": 8,
+  "data_generation_ms": 162.95048400002088,
+  "index_build_ms": 217.68086400015818,
+  "index_overhead": {
+    "nlist": 64.0,
+    "assignment_bytes_per_record": 4.0,
+    "centroid_bytes_per_record": 1.0922666666666667,
+    "radius_bytes_per_record": 0.017066666666666667,
+    "summary_bytes_per_record": 8.482133333333334,
+    "signature_bytes_per_record": 8.285866666666667,
+    "slice_posting_bytes_per_record": 5.298666666666667,
+    "bitmap_slice_bytes_per_record": 13.875,
+    "total_structural_bytes_per_record": 32.76513333333333
+  },
+  "methods": {
+    "BitmapSlice-Exact": {
+      "latency_ms_mean": 4.622162625025794,
+      "latency_ms_median": 0.5333740000423859,
+      "latency_ms_p95": 17.436577000057696,
+      "raw_candidates_mean": 1928.5,
+      "distance_evals_mean": 1773.25,
+      "policy_checks_mean": 1928.5,
+      "summary_checks_mean": 0.0,
+      "bitset_intersection_ms_mean": 0.025634124995121965,
+      "certified_fraction": 1.0
+    },
+    "ExactSecure": {
+      "latency_ms_mean": 8.291384750009456,
+      "latency_ms_median": 8.216633499955606,
+      "latency_ms_p95": 9.47924864997276,
+      "raw_candidates_mean": 15000.0,
+      "distance_evals_mean": 1773.25,
+      "policy_checks_mean": 15000.0,
+      "summary_checks_mean": 0.0,
+      "bitset_intersection_ms_mean": 0.025634124995121965,
+      "certified_fraction": 1.0
+    },
+    "PACER-A": {
+      "latency_ms_mean": 2.695427625042157,
+      "latency_ms_median": 2.382486499982406,
+      "latency_ms_p95": 5.228130000057263,
+      "raw_candidates_mean": 391.875,
+      "distance_evals_mean": 391.875,
+      "policy_checks_mean": 391.875,
+      "summary_checks_mean": 43.75,
+      "bitset_intersection_ms_mean": 0.025634124995121965,
+      "certified_fraction": 0.75
+    },
+    "PACER-C": {
+      "latency_ms_mean": 5.536160125046763,
+      "latency_ms_median": 2.7672020000863995,
+      "latency_ms_p95": 16.094472950010186,
+      "raw_candidates_mean": 1291.875,
+      "distance_evals_mean": 1291.875,
+      "policy_checks_mean": 1291.875,
+      "summary_checks_mean": 51.625,
+      "bitset_intersection_ms_mean": 0.025634124995121965,
+      "certified_fraction": 0.75
+    },
+    "PACER-X": {
+      "latency_ms_mean": 7.376355499985721,
+      "latency_ms_median": 2.7567990000534337,
+      "latency_ms_p95": 23.60484615005589,
+      "raw_candidates_mean": 1928.5,
+      "distance_evals_mean": 1928.5,
+      "policy_checks_mean": 1928.5,
+      "summary_checks_mean": 56.75,
+      "bitset_intersection_ms_mean": 0.025634124995121965,
+      "certified_fraction": 1.0
+    },
+    "PostFilter-IVF": {
+      "latency_ms_mean": 1.2178671250069328,
+      "latency_ms_median": 1.1878860000251734,
+      "latency_ms_p95": 1.4676196999857891,
+      "raw_candidates_mean": 1200.0,
+      "distance_evals_mean": 1200.0,
+      "policy_checks_mean": 1200.0,
+      "summary_checks_mean": 0.0,
+      "bitset_intersection_ms_mean": 0.025634124995121965,
+      "certified_fraction": 0.0
+    },
+    "PreFilter-IVF": {
+      "latency_ms_mean": 1.3737077499911265,
+      "latency_ms_median": 1.3495959999545448,
+      "latency_ms_p95": 1.8057580999311535,
+      "raw_candidates_mean": 1233.25,
+      "distance_evals_mean": 155.125,
+      "policy_checks_mean": 1233.25,
+      "summary_checks_mean": 27.625,
+      "bitset_intersection_ms_mean": 0.025634124995121965,
+      "certified_fraction": 0.0
+    }
+  },
+  "claim_checks": {
+    "has_end_to_end_latency": true,
+    "has_index_build_time": true,
+    "has_memory_accounting": true,
+    "pacer_a_raw_less_than_postfilter": true,
+    "pacer_a_latency_recorded": true
+  }
+}

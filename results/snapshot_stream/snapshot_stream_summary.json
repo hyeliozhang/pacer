@@ -1,0 +1,77 @@
+{
+  "n": 12000,
+  "queries_per_epoch": 32,
+  "epochs": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "rows": 1920,
+  "methods": {
+    "NaiveNoPolicy": {
+      "recall_at_k": 0.2535073578042328,
+      "secure_topk_exact": 0.0,
+      "future_output_violations_total": 412,
+      "deleted_output_violations_total": 360,
+      "policy_output_violations_total": 2448,
+      "tenant_output_violations_total": 2592,
+      "certified_fraction": 0.0,
+      "raw_candidates": 1183.375
+    },
+    "PACER-A": {
+      "recall_at_k": 0.93515625,
+      "secure_topk_exact": 0.78125,
+      "future_output_violations_total": 0,
+      "deleted_output_violations_total": 0,
+      "policy_output_violations_total": 0,
+      "tenant_output_violations_total": 0,
+      "certified_fraction": 0.75,
+      "raw_candidates": 389.1875
+    },
+    "PACER-X": {
+      "recall_at_k": 1.0,
+      "secure_topk_exact": 1.0,
+      "future_output_violations_total": 0,
+      "deleted_output_violations_total": 0,
+      "policy_output_violations_total": 0,
+      "tenant_output_violations_total": 0,
+      "certified_fraction": 1.0,
+      "raw_candidates": 1613.625
+    },
+    "PostFilter-IVF": {
+      "recall_at_k": 0.5434503141534391,
+      "secure_topk_exact": 0.1796875,
+      "future_output_violations_total": 0,
+      "deleted_output_violations_total": 0,
+      "policy_output_violations_total": 0,
+      "tenant_output_violations_total": 0,
+      "certified_fraction": 0.0,
+      "raw_candidates": 1183.375
+    },
+    "StaleNoRecheck": {
+      "recall_at_k": 0.5202732308201058,
+      "secure_topk_exact": 0.125,
+      "future_output_violations_total": 232,
+      "deleted_output_violations_total": 154,
+      "policy_output_violations_total": 0,
+      "tenant_output_violations_total": 0,
+      "certified_fraction": 0.0,
+      "raw_candidates": 1183.375
+    }
+  },
+  "claim_checks": {
+    "safe_future_deleted_policy_tenant_violations": 0,
+    "stale_control_epoch_violations": 386,
+    "naive_policy_violations": 5040,
+    "pacer_x_exact_failures": 0
+  }
+}

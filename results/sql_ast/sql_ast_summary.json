@@ -1,0 +1,150 @@
+{
+  "n": 9000,
+  "dim": 64,
+  "queries": 160,
+  "configured_raw_cap": 4800,
+  "methods": {
+    "ExactSQL-AST": {
+      "recall_at_k": 1.0,
+      "secure_topk_exact": 1.0,
+      "certified_fraction": 1.0,
+      "certificate_errors": 0,
+      "median_latency_ms": 0.5403129998740042,
+      "raw_candidates": 9000.0,
+      "policy_checks": 9000.0,
+      "visited_cluster_count": 0.0,
+      "summary_pruned_clusters": 0.0
+    },
+    "PostFilter-SQL-AST": {
+      "recall_at_k": 0.704375,
+      "secure_topk_exact": 0.15625,
+      "certified_fraction": 0.0,
+      "certificate_errors": 0,
+      "median_latency_ms": 0.24992650014610263,
+      "raw_candidates": 1140.2,
+      "policy_checks": 1140.2,
+      "visited_cluster_count": 8.0,
+      "summary_pruned_clusters": 0.0
+    },
+    "PACER-A-SQL-AST": {
+      "recall_at_k": 0.9481249999999999,
+      "secure_topk_exact": 0.5875,
+      "certified_fraction": 0.0,
+      "certificate_errors": 0,
+      "median_latency_ms": 5.0067610000041896,
+      "raw_candidates": 4800.0,
+      "policy_checks": 4800.0,
+      "visited_cluster_count": 33.975,
+      "summary_pruned_clusters": 0.05
+    },
+    "PACER-X-SQL-AST": {
+      "recall_at_k": 1.0,
+      "secure_topk_exact": 1.0,
+      "certified_fraction": 1.0,
+      "certificate_errors": 0,
+      "median_latency_ms": 8.870922500136658,
+      "raw_candidates": 8998.525,
+      "policy_checks": 8998.525,
+      "visited_cluster_count": 63.95,
+      "summary_pruned_clusters": 0.05
+    }
+  },
+  "by_kind": {
+    "antijoin": {
+      "ExactSQL-AST": {
+        "recall_at_k": 1.0,
+        "secure_topk_exact": 1.0
+      },
+      "PostFilter-SQL-AST": {
+        "recall_at_k": 0.746875,
+        "secure_topk_exact": 0.21875
+      },
+      "PACER-A-SQL-AST": {
+        "recall_at_k": 0.959375,
+        "secure_topk_exact": 0.6875
+      },
+      "PACER-X-SQL-AST": {
+        "recall_at_k": 1.0,
+        "secure_topk_exact": 1.0
+      }
+    },
+    "dnf": {
+      "ExactSQL-AST": {
+        "recall_at_k": 1.0,
+        "secure_topk_exact": 1.0
+      },
+      "PostFilter-SQL-AST": {
+        "recall_at_k": 0.696875,
+        "secure_topk_exact": 0.125
+      },
+      "PACER-A-SQL-AST": {
+        "recall_at_k": 0.953125,
+        "secure_topk_exact": 0.625
+      },
+      "PACER-X-SQL-AST": {
+        "recall_at_k": 1.0,
+        "secure_topk_exact": 1.0
+      }
+    },
+    "mixed": {
+      "ExactSQL-AST": {
+        "recall_at_k": 1.0,
+        "secure_topk_exact": 1.0
+      },
+      "PostFilter-SQL-AST": {
+        "recall_at_k": 0.796875,
+        "secure_topk_exact": 0.3125
+      },
+      "PACER-A-SQL-AST": {
+        "recall_at_k": 0.971875,
+        "secure_topk_exact": 0.71875
+      },
+      "PACER-X-SQL-AST": {
+        "recall_at_k": 1.0,
+        "secure_topk_exact": 1.0
+      }
+    },
+    "range": {
+      "ExactSQL-AST": {
+        "recall_at_k": 1.0,
+        "secure_topk_exact": 1.0
+      },
+      "PostFilter-SQL-AST": {
+        "recall_at_k": 0.6625,
+        "secure_topk_exact": 0.09375
+      },
+      "PACER-A-SQL-AST": {
+        "recall_at_k": 0.9312499999999999,
+        "secure_topk_exact": 0.5
+      },
+      "PACER-X-SQL-AST": {
+        "recall_at_k": 1.0,
+        "secure_topk_exact": 1.0
+      }
+    },
+    "semijoin": {
+      "ExactSQL-AST": {
+        "recall_at_k": 1.0,
+        "secure_topk_exact": 1.0
+      },
+      "PostFilter-SQL-AST": {
+        "recall_at_k": 0.6187499999999999,
+        "secure_topk_exact": 0.03125
+      },
+      "PACER-A-SQL-AST": {
+        "recall_at_k": 0.9249999999999999,
+        "secure_topk_exact": 0.40625
+      },
+      "PACER-X-SQL-AST": {
+        "recall_at_k": 1.0,
+        "secure_topk_exact": 1.0
+      }
+    }
+  },
+  "claim_checks": {
+    "pacer_x_sql_ast_exact_failures": 0,
+    "pacer_sql_ast_certificate_false_positives": 0,
+    "pacer_a_improves_postfilter_recall": true,
+    "pacer_a_improves_postfilter_exactness": true
+  }
+}
