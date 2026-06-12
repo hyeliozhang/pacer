@@ -468,7 +468,7 @@ def main() -> None:
         render_architecture(out / "fig_semantics_architecture.pdf")
         render_executor(out / "fig_executor_contract.pdf")
         (res / "render_tikz_diagrams.log").write_text("TikZ architecture/executor figures rendered successfully.\n")
-    except Exception as exc:  # pragma: no cover - reviewer environments may lack TeX
+    except Exception as exc:  # pragma: no cover - artifact environments may lack TeX
         (res / "render_tikz_diagrams.log").write_text(f"TikZ rendering failed; using matplotlib fallback: {exc}\n")
         architecture(out / "fig_semantics_architecture.pdf")
         executor_contract(out / "fig_executor_contract.pdf")

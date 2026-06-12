@@ -1,11 +1,11 @@
 """SQL-AST visibility contract for PACER.
 
-This reviewer-driven supplement makes the paper's SQL claim executable without
-pretending to be a full SQL parser.  A DBMS parser/optimizer can compile SQL
-into a boolean residual predicate and safe physical summaries.  This file
+This executable supplement makes the paper's SQL claim concrete without
+pretending to be a full SQL parser. A DBMS parser/optimizer can compile SQL
+into a boolean residual predicate and safe physical summaries. This file
 implements a deterministic predicate AST with AND/OR/NOT, IN/NOT IN, range
 atoms, bit-intersection predicates, semijoin-like group membership,
-antijoin-like deny sets, and live-at-epoch atoms.  PACER uses summaries only for
+antijoin-like deny sets, and live-at-epoch atoms. PACER uses summaries only for
 no-false-negative pruning and always evaluates the AST at the row verifier.
 """
 from __future__ import annotations

@@ -2,7 +2,7 @@
 """Transparent frontier filtered-vector baselines for PACER.
 
 This script implements CPU-only, dependency-free counterparts for the main
-algorithmic families a filtered-vector-search reviewer expects to see:
+algorithmic families used in filtered vector search:
 
 * global graph search followed by filtering,
 * inline/pre-filtered graph traversal,

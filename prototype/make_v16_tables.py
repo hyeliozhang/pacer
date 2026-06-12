@@ -161,7 +161,7 @@ def main():
         lines += ['\\bottomrule','\\end{tabular}']
         (FIG/'table_blind_robustness.tex').write_text('\n'.join(lines))
 
-# v20 deadline-scale and memory audit tables are appended by a second pass.
+# Scale and memory audit tables are appended by a second pass.
 def make_v20_extra_tables():
     import json
     large_path = RES/'large_scale'/'large_scale_60k_summary.json'

@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Run the reviewer-facing frontier-scale PACER audit.
+"""Run the frontier-scale PACER audit.
 
 The default 15K workload is the main evidence path; the 60K gate checks normal
 scaling.  This script adds a deliberately compact 120K/240K frontier audit over
-a compact fixed-seed query set so reviewers can inspect whether PACER's raw-verification work,
-certification status, and latency counters remain meaningful beyond the main
+a compact fixed-seed query set so users can inspect whether PACER's
+raw-verification work, certification status, and latency counters remain
+meaningful beyond the main
 workload without waiting for the full 320-query suite at each scale.
 """
 from __future__ import annotations

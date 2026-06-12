@@ -1,5 +1,7 @@
 paper/
-checks/
+checks/*
+!checks/
+!checks/check_artifact.py
 .git/
 __pycache__/
 .pytest_cache/

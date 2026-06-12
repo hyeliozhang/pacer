@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """Frozen-parameter blind robustness audit for PACER.
 
-This run is designed to address the reviewer concern that the default synthetic
-workload could be over-tuned.  It fixes the executor parameters once, then runs a
-small factorial grid over independent seeds, policy/vector correlation regimes,
-and deletion rates.  The script never changes budgets or index parameters based
-on observed outcomes; the configuration manifest is written before evaluation
-and hashed into the summary.
+This run stress-tests whether the default synthetic workload could be
+over-tuned. It fixes the executor parameters once, then runs a small factorial
+grid over independent seeds, policy/vector correlation regimes, and deletion
+rates. The script never changes budgets or index parameters based on observed
+outcomes; the configuration manifest is written before evaluation and hashed
+into the summary.
 """
 from __future__ import annotations
 

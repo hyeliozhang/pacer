@@ -1,5 +1,4 @@
-.DS_Store
-Thumbs.db
+.git/
 __pycache__/
 *.py[cod]
 .pytest_cache/
@@ -8,6 +7,8 @@ __pycache__/
 .venv/
 venv/
 env/
+checks/*.log
+results/*.log
 *.aux
 *.bbl
 *.blg
@@ -18,9 +19,6 @@ env/
 *.synctex.gz
 *.xdv
 paper/
-checks/*
-!checks/
-!checks/check_artifact.py
 *.zip
 *.tar
 *.tar.gz

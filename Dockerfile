@@ -6,12 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
-    ghostscript \
-    poppler-utils \
-    texlive-latex-base \
-    texlive-latex-extra \
-    texlive-fonts-recommended \
-    texlive-bibtex-extra \
+    bash \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /artifact

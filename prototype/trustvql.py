@@ -688,7 +688,7 @@ def exact_secure(ds: PolicyVectorDataset, p: QueryPolicy, k: int = 10) -> Dict:
 def bitmap_slice_exact(ds: PolicyVectorDataset, index: IVFIndex, p: QueryPolicy, k: int = 10) -> Dict:
     """Exact row-slice prefilter baseline using PACER's non-epoch bitmap access path.
 
-    This baseline gives reviewers a strong non-ANN competitor: it uses the same
+    This baseline provides a strong non-ANN competitor: it uses the same
     exact tenant/scalar/provenance/sensitivity bitmap slice as PACER, then applies
     the authoritative insertion/deletion verifier and scores every visible row in
     the slice. It is exact but does not attempt early stopping or upper-bound
@@ -765,7 +765,7 @@ def exact_prefix_post_filter(ds: PolicyVectorDataset, p: QueryPolicy, k: int = 1
 
     This method is not an implementable ANN shortcut because it scores every row
     to obtain the true global prefix before filtering.  It is included to answer
-    a reviewer question: even a perfect global-prefix access path is still not a
+    a key baseline question: even a perfect global-prefix access path is still not a
     declarative policy-constrained top-k plan unless its prefix reaches the
     visible rank depth.
     """

@@ -1,41 +1,74 @@
-# PACER Artifact
+# PACER
 
-This repository contains the reviewer-facing artifact for PACER, a proof-carrying executor contract for policy-constrained vector top-k query processing.
+PACER is a CPU-only research prototype for proof-carrying,
+policy-constrained vector top-k query processing over attributed vector
+relations. The code implements an IVF-style access path, conservative policy
+summaries, row-slice candidate generation, row-level visibility checks, and
+certificate replay for ordered secure top-k answers.
 
-## Current closure
+The repository contains the executable artifact used for the paper
+`PACER: Proof-Carrying Policy-Constrained Vector Top-k Query Processing`.
+It includes the prototype, shipped result summaries, generated paper figures
+and tables, public feature-matrix inputs, and consistency checks that connect
+the code to the reported evidence.
 
-The artifact ties the main experimental claims to generated tables, JSON summaries, replay checks, and executable gates. This clean repository intentionally excludes paper sources, PDFs, local formatting checks, reviewer notes, host-specific paths, caches, and internal review material.
+## Quick Start
 
-The package includes the prototype, reproduction scripts, public/synthetic data inputs, result summaries, generated figures/tables, and lightweight checks needed to inspect the reported systems evidence.
-
-## Key results
-
-- Default workload: 15,000 vectors, 64 dimensions, 320 queries, 16 methods, 5,120 method-query rows.
-- PACER-A: 0.981 secure recall@10 and 0.881 ordered exactness with zero returned-policy, tenant, or epoch violations.
-- PACER-C and PACER-X: 1.000 ordered exactness on the default workload; PACER-X certificates have zero replay failures.
-- Scale gates: PACER-A reaches 0.967 recall with 688 raw checks at 60K; on 120K/240K frontier audit and adapter-contract checks it verifies 683/835 raw identifiers, and PACER-X remains ordered exact.
-- Memory/build audit: structural metadata is 33.0 bytes/record at 15K, 39.8 at 60K, 46.0 at 120K, and 49.4 at 240K; build cost is reported as an optimizer-facing quantity.
-- Blind robustness: 27 frozen configurations; PACER-A beats post-filtering in exactness and raw-work on every configuration; PACER-C and PACER-X are exact.
-
-## Reproduction entry points
-
-Use the quick gate first:
+The fastest path is the containerized check:
 
 ```bash
+docker build -t pacer-artifact .
+docker run --rm pacer-artifact
+```
+
+On a local Python 3.11 installation:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 bash reproduce_checks.sh
 ```
 
-To regenerate the default synthetic workload from the repository root:
+`reproduce_checks.sh` compiles the prototype, runs deterministic invariant
+tests, exercises the access-path adapter contract, regenerates the LaTeX
+tables from the shipped summaries, and validates the main JSON/CSV evidence.
 
-```bash
-bash reproduce_default_workload.sh
-```
+## Main Evidence
 
-The artifact checker validates generated evidence, safety counters, certificate replay, finite model checking, SQL workloads, public-feature checks, dynamic update checks, scalability, adapter-contract, and memory audits, and table consistency. The access-path adapter contract can also be inspected directly with `python prototype/access_path_adapter.py`.
+- Default workload: 15,000 vectors, 64 dimensions, 320 queries, 16 methods,
+  and 5,120 method-query rows.
+- PACER-A obtains 0.981 secure recall@10 and 0.881 ordered exactness while
+  checking 707 raw identifiers per query; post-filtering obtains 0.610 and
+  0.169 while checking 1,893 identifiers.
+- PACER-C and PACER-X are ordered-exact on the default workload, with zero
+  replayed certificate failures for PACER-X.
+- Scale checks include a 60K full gate and 120K/240K frontier probes; PACER-X
+  remains ordered-exact and PACER-A uses fewer raw identifiers than
+  post-filtering.
+- The artifact also includes proof replay, finite model checking, SQL-policy
+  workloads, SQL-AST workloads, update/deletion checks, public-feature matrix
+  runs, memory accounting, and adapter-contract checks.
 
-## Files
+## Reproduction Levels
 
-- `prototype/`: transparent Python prototype and experiment drivers.
-- `results/`: generated CSV/JSON summaries.
-- `figures/`: generated PDF figures and LaTeX tables.
-- `Dockerfile`, `environment.lock.txt`: optional containerized reviewer environment for the quick gates.
+- Fast consistency check: `bash reproduce_checks.sh`.
+- Default workload regeneration: `bash reproduce_default_workload.sh`.
+- 120K/240K frontier-scale regeneration: `bash reproduce_scale_frontier.sh`.
+
+The full default workload is intentionally larger than the quick check because
+it evaluates 320 queries across 16 methods. The repository ships the generated
+summaries so the evidence can be inspected without rerunning the long jobs.
+
+## Repository Layout
+
+- `prototype/`: PACER implementation and experiment drivers.
+- `tests/`: deterministic invariant tests for pruning, SQL-AST semantics,
+  update visibility, and certificate conditions.
+- `checks/`: artifact consistency checker.
+- `results/`: shipped CSV/JSON summaries used by the paper tables.
+- `figures/`: generated PDF figures and LaTeX table fragments.
+- `data/external/pendigits/`: public Pendigits input files and checksums.
+- `ARTIFACT_README.md`: detailed reproduction notes.
+- `EVIDENCE.md`: claim-to-file evidence map.
+- `REPRODUCIBILITY.md`: expected commands, outputs, and runtime notes.

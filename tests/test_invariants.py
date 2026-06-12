@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Invariant tests for the PACER artifact.
 
-These are small deterministic tests intended for reviewers. They do not replace
-experiments; they check proof obligations that should hold independently of a
-particular metric table.
+These are small deterministic tests for fast artifact checks. They do not
+replace experiments; they check proof obligations that should hold
+independently of a particular metric table.
 """
 from __future__ import annotations
 from pathlib import Path

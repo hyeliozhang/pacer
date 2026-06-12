@@ -1,6 +1,6 @@
-# Evidence map for PACER
+# Evidence Map
 
-This file maps paper claims to generated artifact evidence.
+This file maps PACER claims to concrete artifact files.
 
 ## Default workload
 
@@ -12,7 +12,7 @@ This file maps paper claims to generated artifact evidence.
 
 - Source: `results/cost_accounting/cost_accounting_summary.json`, `results/large_scale/large_scale_60k_summary.json`, `results/scale_frontier/scale_frontier_summary.json`, `results/memory_audit/memory_audit.json`, and `results/scalability.csv`.
 - Main table: `figures/table_efficiency_scalability.tex`.
-- Claim: latency, raw identifiers, policy checks, 60K full-gate behavior, 120K/240K frontier-scale behavior, structural metadata, and build cost are reported as optimizer-facing quantities.
+- Claim: latency, raw identifiers, policy checks, 60K full-gate behavior, 120K/240K frontier-scale behavior, structural metadata, and build cost are reported as optimizer-visible quantities.
 
 ## Access-path adapter contract
 
